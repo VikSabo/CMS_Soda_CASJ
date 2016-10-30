@@ -2,16 +2,6 @@
   
  ================= */
 
-code {
-  background: #2db34a;
-  border-radius: 6px;
-  color: #fff;
-  display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-  padding: 24px 15px;
-  text-align: center;
-}
-
 body {
   background-color: antiquewhite;
 }
@@ -123,7 +113,7 @@ background-image: url('info.png');
 .success {
 color: #4F8A10;
 background-color: #DFF2BF;
-background-image:url('success.png');
+background-image:url('http://anticadimoradivalregina.com/images/icons/icon-success.png');
 }
 .warning {
 color: #9F6000;

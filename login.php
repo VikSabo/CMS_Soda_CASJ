@@ -1,3 +1,43 @@
+<?php
+  include 'connection_db.php';
+  // Connect to the database
+  $connection = db_connect();
+
+  //Star a new session
+  session_start();
+
+  //Get and error flag
+  $error = 0;
+
+  //When user press the submit button
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //user name and password sent from form
+    
+    $myusername = mysqli_real_escape_string($connection, $_POST['username']);
+    $mypassword = mysqli_real_escape_string($connection, $_POST['password']);
+
+    //Fecth the user on the database
+    $sql = "SELECT id_admin FROM administrador WHERE nick = '$myusername' AND password = '$mypassword'";
+
+    $result = mysqli_query($connection,$sql);
+    //Execute the query
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    //$active = $row['active'];
+
+    $count = mysqli_num_rows($result);
+
+    // If the result matched $myusername and $mypassword, table row must be 1 row
+
+    if ($count == 1) {
+      $_SESSION['login_user'] = $myusername;
+      header("location: adminPage.php");
+    } else {
+      $error = 1;
+    }
+
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,13 +62,18 @@
 
   <div class="container">
     <section id="content">
-      <form action="">
+      <?php 
+        if ($error == 1) {
+          echo "<div class='error'>El nombre de usuario o contraseña son incorrectos</div>";
+        }
+      ?>
+      <form action="" method="post">
         <h1>Iniciar Sesión</h1>
         <div>
-          <input type="text" placeholder="Nombre de usuario" required="" id="username" />
+          <input type="text" placeholder="Nombre de usuario" required="" id="username" name="username" />
         </div>
         <div>
-          <input type="password" placeholder="Contraseña" required="" id="password" />
+          <input type="password" placeholder="Contraseña" required="" id="password" name="password" />
         </div>
         <div>
           <input type="submit" value="Iniciar Sesión" />
@@ -38,18 +83,18 @@
     </section>
   </div>
 
-  <footer id="footer">
+  <!--<footer id="footer">
     <div align="center">
       <label>Síguenos en:</label>
       <ul class="soc">
         <li><a class="soc-twitter" href="#"></a></li>
         <li><a class="soc-facebook" href="#"></a></li>
         <li><a class="soc-google" href="#"></a></li>
-        <!--<li><i class="fa fa-cc-mastercard" aria-hidden="true" style="font-size:48px;color:black"></i></li>-->
+        <li><i class="fa fa-cc-mastercard" aria-hidden="true" style="font-size:48px;color:black"></i></li>
       </ul>
        &copy; Instituto Tecnológico de Costa Rica 2016
     </div>
-  </footer>
+  </footer>-->
  
 </body>
 </html>

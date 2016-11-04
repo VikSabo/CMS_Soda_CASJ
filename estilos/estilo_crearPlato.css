@@ -1,7 +1,15 @@
 /*=========================
   
  ================= */
+input {
+	
+  font-family: fantasy;
 
+} 
+ 
+ 
+ 
+ 
 container-menu {
    background-color: white;
    width: 500px;

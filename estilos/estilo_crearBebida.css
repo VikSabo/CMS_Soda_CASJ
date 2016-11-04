@@ -2,6 +2,13 @@
   
  ================= */
 
+input {
+	
+  font-family: fantasy;
+
+} 
+ 
+ 
 container-menu {
    background-color: white;
    width: 500px;
@@ -60,6 +67,7 @@ form input[type="date"]{
     border: 1px solid #AAA;
     color: #555;
     font-size: inherit;
+    font-family: fantasy;
     margin: 20px;
     overflow: hidden;
     padding: 5px 10px;
@@ -167,29 +175,6 @@ background-image: url('https://book.cebupacificair.com/images/CebuAirRevamp/ceb-
     margin-right: 10px;
     color: #ffffff;
     background-color: none;
-}
-
-.soc-icon-last{
-    margin:0 !important;
-}
-
-.soc-twitter {
-    background-color: #4da7de;
-}
-.soc-twitter:before {
-    content:'a';
-}
-.soc-facebook {
-    background-color: #3e5b98;
-}
-.soc-facebook:before {
-    content:'b';
-}
-.soc-google {
-    background-color: #d93e2d;
-}
-.soc-google:before {
-    content:'c';
 }
 
 body {

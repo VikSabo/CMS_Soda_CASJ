@@ -10,7 +10,7 @@
 
 
 		// Query to insert data
-		$sql = "INSERT INTO `menu`(`id_plato`, `id_bebida`, `date`) VALUES ('$selectOptionPlato','$selectOptionBebida','$date')";
+		$sql = "INSERT INTO `menu`(`id_plato`, `id_bebida`, `date`) VALUES ('$selectOptionPlato','$selectOptionBebida','$date', 'r')";
 
 		// Insert the data if the query its ok
 		if ($connection->query($sql) === TRUE) {

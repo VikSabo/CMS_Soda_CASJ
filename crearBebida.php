@@ -1,5 +1,5 @@
 <?php
-  include 'connection_db.php';
+  include_once ('session.php');
   // Connect to the database
   $connection = db_connect();
 
@@ -34,28 +34,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Crear Bebida</title>
-  <link rel="stylesheet" type="text/css" href="estilos/estilo_crearBebida.css">
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" type="text/css" href="estilos/estilo_index.css"> 
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+	<title>Welcome</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="estilos/estilo_general.css">
+	<link rel="stylesheet" type="text/css" href="estilos/estilo_crearBebida.css">
 </head>
 <body>
+	<div id="header">
+	  <div class="shell">
 
-  <br><br>
+	    <div id="top">
+	      <h1 id="Fuente-h1">Administrador</h1>
+	      <div id="top-navigation"> Welcome <a href="#"><strong> <?php echo $login_session; ?></strong></a> <span>|</span> <a href="#">Help</a> <span>|</span> <a href="#">Profile Settings</a> <span>|</span> <a href="logout.php">Log out</a> </div>
+	    </div>
+	    
+	    <div id="navigation">
+	      <ul>
+	        <li><a href="#" class="active"><span>Bandeja de Entrada</span></a></li>
+	        <li><a href="create_menu.php"><span>Crear Nuevo Menu</span></a></li>
+	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
+	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
+	      </ul>
+	    </div>
+	
+	  </div>
+	</div>
 
+
+<div id="container">
   <h1 align = "center">Formulario para Agregar una Bebida Nueva</h1>
+  <br>
   <br>
   <div align = "center">
   <section>
   <!-- meter lo del form -->
    <div class="formulario" align="center">
     <form action="" method="post">
-      <label for="lname">Ingrese el nombre:</label>
+      <label for="lname">Ingrese el Nombre:</label>
       <input type="text" id="nombrebebida" name="nombrebebida"><br>
 	  <br>
-	  <label for="lname">Descripción de la bebida:</label>
+	  <label for="lname">Descripción de la Bebida:</label>
       <input type="text" id="descripcionbebida" name="descripcionbebida"><br>
 	  <br>
 	  <label for="lname">Ingrese el precio de la Bebida:</label>
@@ -72,9 +90,13 @@
 	  <br>
 	  <input type="submit" value="Agregar Bebida"/><br>
     </form>
+	
   </div>
+  
  </section>
  </div>
+ </div>
+
  
 
 

@@ -45,8 +45,8 @@
 	      <ul>
 	        <li><a href="#"><span>Bandeja de Entrada</span></a></li>
 	        <li><a href="#" class="active"><span>Crear Nuevo Menu</span></a></li>
-	        <li><a href="#"><span>Crear Nuevo Plato</span></a></li>
-	        <li><a href="#"><span>Crear Nueva Bebida</span></a></li>
+	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
+	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
 	        
 	      </ul>
 	    </div>

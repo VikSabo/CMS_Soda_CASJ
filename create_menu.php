@@ -12,7 +12,7 @@
 
 
 		// Query to insert data
-		$sql = "INSERT INTO `menu`(`id_plato`, `id_bebida`, `date`) VALUES ('$selectOptionPlato','$selectOptionBebida','$date', 'r')";
+		$sql = "INSERT INTO `menu`(`id_plato`, `id_bebida`, `date`) VALUES ('$selectOptionPlato','$selectOptionBebida','$date')";
 
 		// Insert the data if the query its ok
 		if ($connection->query($sql) === TRUE) {
@@ -37,14 +37,13 @@
 	  <div class="shell">
 
 	    <div id="top">
-	      <h1><a href="#">Administrador</a></h1>
 	      <div id="top-navigation"> Welcome <a href="#"><strong> <?php echo $login_session; ?></strong></a> <span>|</span> <a href="#">Help</a> <span>|</span> <a href="#">Profile Settings</a> <span>|</span> <a href="logout.php">Log out</a> </div>
 	    </div>
 	    
 	    <div id="navigation">
 	      <ul>
-	        <li><a href="#"><span>Bandeja de Entrada</span></a></li>
-	        <li><a href="#" class="active"><span>Crear Nuevo Menu</span></a></li>
+	        <li><a href="adminPage.php"><span>Bandeja de Entrada</span></a></li>
+	        <li><a href="create_menu.php" class="active"><span>Crear Nuevo Menu</span></a></li>
 	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
 	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
 	        

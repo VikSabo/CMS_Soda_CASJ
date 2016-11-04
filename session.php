@@ -1,6 +1,6 @@
 <?php
 	
-	include 'connection_db.php';
+	include_once ('connection_db.php');
 	// Connect to the database
   	$connection = db_connect();
 

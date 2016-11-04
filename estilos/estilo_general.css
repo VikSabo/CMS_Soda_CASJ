@@ -8,11 +8,11 @@
 }
 
 body {
-	background:#f9ebae;
+	background:#80e489;
 	font-family: Verdana, sans-serif;
 	font-size:11px;
 	line-height:14px;
-	color:#5e5e5e;
+	color:#000000;
 }
 
 .shell { 
@@ -25,7 +25,7 @@ body {
 	height:89px; 
 	/*background:url(../img/header.gif); */
 	white-space:nowrap;
-	background-color: #761D2A; 
+	background-color: #1b5488; 
 }
 
 #header h1{ 
@@ -79,7 +79,7 @@ body {
 }
 #navigation ul li a { 
 	line-height:36px; 
-	color:#907525; 
+	color:#ffffff; 
 	text-decoration: none; 
 }
 
@@ -95,7 +95,7 @@ body {
 
 #navigation ul li a.active { 
 	font-size:12px; font-weight: bold; 
-	color:#887e42; 
+	color:#ffffff; 
 }
 
 #container { 

@@ -1,0 +1,32 @@
+table.db-table    { 
+	border-right:1px solid #ccc; 
+	border-bottom:1px solid #ccc; 
+}
+
+table.db-table th { 
+	background:#eee; 
+	padding:5px; 
+	border-left:1px solid #ccc; 
+	border-top:1px solid #ccc; 
+}
+
+table.db-table td { 
+	padding:5px; 
+	border-left:1px solid #ccc; 
+	border-top:1px solid #ccc; 
+	background-color: darkseagreen;
+    color: seashell;
+    text-align: center;
+}
+
+h1 {
+	font-family: 'Papyrus', fantasy;
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 26.4px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: darkgreen;
+}

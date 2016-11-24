@@ -13,7 +13,7 @@
     <script language="JavaScript" type="text/javascript">
     $(document).ready(function(){
         $("a.delete").click(function(e){
-            if(!confirm('Estas seguro que desea eliminar esta información?')){
+            if(!confirm('Estas seguro que desea eliminar esta Bebida?')){
                 e.preventDefault();
                 return false;
             }
@@ -36,9 +36,9 @@
 	        <li><a href="create_menu.php"><span>Crear Nuevo Menu</span></a></li>
 	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
 	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
-	        <li><a class="active" href="ver_informacion.php"><span>Ver información</span></a></li>
+	        <li><a href="ver_informacion.php"><span>Ver información</span></a></li>
 	        <li><a href="eliminar_Plato.php"><span>Eliminar Plato</span></a></li>
-	        <li><a href="eliminar_Bebida.php"><span>Eliminar Bebida</span></a></li>
+	        <li><a class="active" href="eliminar_Bebida.php"><span>Eliminar Bebida</span></a></li>
 
 	      </ul>
 	    </div>
@@ -60,16 +60,17 @@
 			$id=1;
 		}
 		//Fetch from database first 10 items which is its limit. For that when page open you can see first 10 items. 
-		$query = mysqli_query($connection,"SELECT m.id_menu, p.nombre_plato, b.nombre_bebida, m.date FROM menu m  INNER JOIN plato p ON m.id_plato = p.id_plato INNER JOIN bebida b ON m.id_bebida = b.id_bebida LIMIT $start, $limit");
+		//$query = mysqli_query($connection,"SELECT m.id_menu, p.nombre_plato, b.nombre_bebida, m.date FROM menu m  INNER JOIN plato p ON m.id_plato = p.id_plato INNER JOIN bebida b ON m.id_bebida = b.id_bebida LIMIT $start, $limit");
+		$query = mysqli_query($connection,"SELECT id_bebida, nombre_bebida, descripcion, precio FROM bebida");
 
 	?>
 	<h1>Información sobre Menu</h1>
 	<table border='1' cellpadding='10'>
   		<tr>
           <th>ID</th>
-          <th>Nombre Plato</th>
-          <th>Nombre Bebida</th> 
-          <th>Fecha</th>
+          <th>Nombre Bebida</th>
+          <th>Descripción de la Bebida</th> 
+          <th>Precio de la Bebida</th>
           <th></th>
           <th></th>
         </tr>
@@ -79,17 +80,17 @@
 		{
 			echo "<tr>";
 
-	        echo '<td>' . $result['id_menu'] . '</td>';
-
-	        echo '<td>' . $result['nombre_plato'] . '</td>';
+	        echo '<td>' . $result['id_bebida'] . '</td>';
 
 	        echo '<td>' . $result['nombre_bebida'] . '</td>';
 
-	        echo '<td>' . $result['date'] . '</td>';
+	        echo '<td>' . $result['descripcion'] . '</td>';
 
-	        echo '<td><a href="editar_menu.php?id=' . $result['id_menu'] . '">Editar</a></td>';
+	        echo '<td>' . $result['precio'] . '</td>';
 
-	        echo '<td><a href="eliminar_menu.php?id=' . $result['id_menu'] . '" class="delete">Eliminar</a></td>';
+	        
+
+	        echo '<td><a href="ElimBebida.php?id=' . $result['id_bebida'] . '" class="delete">Eliminar</a></td>';
 
 	        echo "</tr>";
 		}
@@ -98,7 +99,7 @@
 	<div class="pagination clearfix">
 	<?php
 		//fetch all the data from database.
-		$rows = mysqli_num_rows(mysqli_query($connection,"select * from `menu`"));
+		$rows = mysqli_num_rows(mysqli_query($connection,"select * from `bebida`"));
 		//calculate total page number for the given table in the database 
 		$total=ceil($rows/$limit);
 		if($id>1)

@@ -64,7 +64,7 @@
     <section id="content">
       <?php 
         if ($error == 1) {
-          echo "<div class='error'>El nombre de usuario o contraseña son incorrectos</div>";
+          echo "El nombre de usuario o contraseña son incorrectos";
         }
       ?>
       <form action="" method="post">

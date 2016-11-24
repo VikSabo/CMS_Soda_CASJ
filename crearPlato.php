@@ -52,9 +52,11 @@
 	      <ul>
 	        <li><a href="#"><span>Bandeja de Entrada</span></a></li>
 	        <li><a href="create_menu.php"><span>Crear Nuevo Menu</span></a></li>
-	        <li><a href="crearPlato.php" class="active"><span>Crear Nuevo Plato</span></a></li>
+	        <li><a class="active" href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
 	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
 	        <li><a href="ver_informacion.php"><span>Ver Informacion</span></a></li>
+	        <li><a href="eliminar_Plato.php"><span>Eliminar Plato</span></a></li>
+	        <li><a href="eliminar_Bebida.php"><span>Eliminar Bebida</span></a></li>
 	      </ul>
 	    </div>
 	

@@ -163,3 +163,32 @@ color: #D8000C;
 background-color: #FFBABA;
 background-image: url('https://book.cebupacificair.com/images/CebuAirRevamp/ceb-error-icon.png');
 }
+
+/*Estilo paginación*/
+.pagination {
+    text-align: center;
+    margin: 20px
+}
+.pagination a, .pagination strong {
+    background: #83f2d6;;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+    line-height: 1.5em;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pagination a:hover {
+    background-color: #BEBEBE;
+    color: #fff;
+}
+.pagination a:active {
+    background: rgba(190, 190, 190, 0.75);
+}
+.pagination strong {
+    color: #fff;
+    background-color: #BEBEBE;
+}

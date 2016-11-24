@@ -45,6 +45,7 @@
 	        <li><a href="create_menu.php"><span>Crear Nuevo Menu</span></a></li>
 	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
 	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
+	        <li><a href="ver_informacion.php"><span>Ver Informacion</span></a></li>
 	      </ul>
 	    </div>
 	  </div>

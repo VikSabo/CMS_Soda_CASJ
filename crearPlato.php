@@ -75,12 +75,16 @@
    <div class="formulario" align="center">
     <form action="" method="post">
       <label for="lname">Ingrese el Nombre:</label>
+      <br>
       <input type="text" id="nombreplato" name="nombreplato"><br>
 	  <br>
 	  <label for="lname">Descripción del Platillo:</label>
-      <input type="text" id="descripcionplato" name="descripcionplato"><br>
+	  <br>
+	  <textarea name="descripcionplato" id="descripcionplato" style="font-family: fantasy;" rows="4" cols="27"></textarea>
+	  <br>
 	  <br>
 	  <label for="lname">Ingrese el precio del Platillo:</label>
+	  <br>
       <input type="number" id="precioplato" name="precioplato"><br>
 	  <br>
 	  <input type="file" id="myFile" name="myFile">

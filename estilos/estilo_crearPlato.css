@@ -8,7 +8,9 @@ input {
 } 
  
  
- 
+textarea {
+  font-family: fantasy;
+}
  
 container-menu {
    background-color: white;

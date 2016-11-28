@@ -4,24 +4,24 @@
 
 	$connection = db_connect();
 
-	$sql = "SELECT * FROM cotizar";
+	$sql = "SELECT `nombre_contacto`, `apellido_contacto`, `telefono_contacto`, `email_contacto`, `provincia`.`nombre_provincia`, `lugar_contacto`, `fecha_contacto`, `personas_contacto`, `servicio_contacto`, `extra_contacto` FROM `cotizar` INNER JOIN `provincia` ON `cotizar`.`id_provincia`=`provincia`.`id_provincia`";
 	$result = mysqli_query($connection, $sql);
 
 	if (mysqli_num_rows($result) > 0) {
-		echo '<table cellpadding="0" cellspacing="0" class="db-table">';
-		echo '<tr><th>ID</th><th>NOMBRE</th><th>APELLIDO</th><th>TELÉFONO</th><th>EMAIL</th><th>PROVINCIA</th><th>DIRECCIÓN</th><th>FECHA (EVENTO)</th><th>NÚMERO DE PERSONAS</th><th>SERVICIO</th><th>INFORMACIÓN ADICIONAL</th></tr>';
+		echo '<table cellpadding="0" cellspacing="0" class="hoverTable">';
+		echo '<tr><th>NOMBRE</th><th>APELLIDO</th><th>TELÉFONO</th><th>EMAIL</th><th>PROVINCIA</th><th>DIRECCIÓN</th><th>FECHA (EVENTO)</th><th>NÚMERO DE PERSONAS</th><th>SERVICIO</th><th>INFORMACIÓN ADICIONAL</th><th>COTIZACIÓN</th></tr>';
 	    // output data of each row
 	    while($row = mysqli_fetch_assoc($result)) {
 	    	echo '<tr>';
 			foreach($row as $key=>$value) {
 				echo '<td>',$value,'</td>';
-			}
+			}?>
+			<td align='center'><input type=submit value="Cotizar" style="width:100%" onClick="return popup(this, 'notes')"><?php
 			echo '</tr>';
 	    }
 	} else {
 	    echo "0 results";
 	}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +31,17 @@
 	<link rel="stylesheet" type="text/css" href="estilos/estilo_general.css">
 	<link rel="stylesheet" type="text/css" href="estilos/estilo_adminPage.css">
 </head>
+<SCRIPT TYPE="text/javascript">
+  function popup(mylink, windowname) { 
+    if (! window.focus)return true;
+    var href;
+    if (typeof(mylink) == 'string') href=mylink;
+    else href=mylink.href; 
+    //window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
+    window.open("http://localhost/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=400,height=200,scrollbars=yes'); 
+    return false; 
+  }
+</SCRIPT>
 <body>
 	<div id="header">
 	  <div class="shell">

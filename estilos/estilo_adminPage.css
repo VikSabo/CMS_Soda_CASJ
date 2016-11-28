@@ -1,24 +1,3 @@
-table.db-table    { 
-	border-right:1px solid #ccc; 
-	border-bottom:1px solid #ccc; 
-}
-
-table.db-table th { 
-	background:#eee; 
-	padding:5px; 
-	border-left:1px solid #ccc; 
-	border-top:1px solid #ccc; 
-}
-
-table.db-table td { 
-	padding:5px; 
-	border-left:1px solid #ccc; 
-	border-top:1px solid #ccc; 
-	background-color: darkseagreen;
-    color: seashell;
-    text-align: center;
-}
-
 h1 {
 	font-family: 'Papyrus', fantasy;
     font-size: 35px;
@@ -29,4 +8,36 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     color: darkgreen;
+}
+
+.hoverTable{
+	font-family: verdana,arial,sans-serif;
+	font-size: 12px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin: 0px 50px;
+}
+.hoverTable td{ 
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+/* Define the default color for all the table rows */
+.hoverTable tr{
+	background-color:#ffffff;
+}
+/* Define the hover highlight color for the table row */
+.hoverTable tr:hover {
+      background-color: #d4e3e5;
+}
+
+.hovertable th {
+	background-color:#c3dde0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
 }

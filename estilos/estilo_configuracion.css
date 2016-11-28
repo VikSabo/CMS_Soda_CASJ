@@ -1,0 +1,53 @@
+
+label{
+	margin-top: 12px;
+ 	font-family:"Arial", cursive, sans-serif !important;
+    font-size: 20px;
+    color: #C10E29;
+}
+
+
+#contenedor2{
+	margin-top: 42px;
+	margin-left: 421px;
+	width: 526px;
+	height: 400px;
+	border: 1px solid blue;
+	text-align: center;
+	align-items: center;
+	background-color: white;
+}
+
+input[type=password],input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  -moz-box-shadow: 0px 11px 14px -8px #595959;
+  -webkit-box-shadow: 0px 11px 14px -8px #595959;
+  box-shadow: 0px 11px 14px -8px #595959;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c72424), color-stop(1, #761d2a));
+  background:-moz-linear-gradient(top, #c72424 5%, #761d2a 100%);
+  background:-webkit-linear-gradient(top, #c72424 5%, #761d2a 100%);
+  background:-o-linear-gradient(top, #c72424 5%, #761d2a 100%);
+  background:-ms-linear-gradient(top, #c72424 5%, #761d2a 100%);
+  background:linear-gradient(to bottom, #c72424 5%, #761d2a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c72424', endColorstr='#761d2a',GradientType=0);
+  background-color:#c72424;
+  -moz-border-radius:13px;
+  -webkit-border-radius:13px;
+  border-radius:13px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Verdana;
+  font-size:14px;
+  margin: 15px 0px 20px 25px;
+  font-weight:bold;
+  padding: 9px 17px;
+  text-decoration:none;
+  text-shadow:1px 2px 7px #141414;
+}

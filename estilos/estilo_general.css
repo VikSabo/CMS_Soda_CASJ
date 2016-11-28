@@ -146,7 +146,7 @@ background-position: 10px center;
 .info {
 color: #00529B;
 background-color: #BDE5F8;
-background-image: url('info.png');
+background-image: url('');
 }
 .success {
 color: #4F8A10;
@@ -192,3 +192,4 @@ background-image: url('https://book.cebupacificair.com/images/CebuAirRevamp/ceb-
     color: #fff;
     background-color: #BEBEBE;
 }
+

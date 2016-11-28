@@ -37,7 +37,7 @@
 	  <div class="shell">
 
 	    <div id="top">
-	      <div id="top-navigation"> Welcome <a href="#"><strong> <?php echo $login_session; ?></strong></a> <span>|</span> <a href="#">Help</a> <span>|</span> <a href="#">Profile Settings</a> <span>|</span> <a href="logout.php">Log out</a> </div>
+	      <div id="top-navigation"> Welcome <a href="#"><strong> <?php echo $login_session; ?></strong></a> <span>|</span> <a href="#">Help</a> <span>|</span> <a href="configuracion.php">Configuración</a> <span>|</span> <a href="logout.php">Log out</a> </div>
 	    </div>
 	    
 	    <div id="navigation">

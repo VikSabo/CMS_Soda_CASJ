@@ -65,7 +65,6 @@
 
 	
 <div id="container">
-  <h1 align = "center">Formulario para Agregar una Comida Nueva</h1>
   <br>
   <br>
   <div align = "center">

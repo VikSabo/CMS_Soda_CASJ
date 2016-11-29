@@ -62,7 +62,6 @@
 		$query = mysqli_query($connection,"SELECT m.id_menu, p.nombre_plato, b.nombre_bebida, m.date FROM menu m  INNER JOIN plato p ON m.id_plato = p.id_plato INNER JOIN bebida b ON m.id_bebida = b.id_bebida LIMIT $start, $limit");
 
 	?>
-	<h1>Información sobre Menu</h1>
 	<table border='1' cellpadding='10'>
   		<tr>
           <th>ID</th>

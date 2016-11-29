@@ -29,7 +29,6 @@
 
 	}
 
-   
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +71,7 @@
   <div align = "center">
   <section>
   <!-- meter lo del form -->
-   <div class="formulario" align="center">
+   <div id="container-menu" align="center">
     <form action="" method="post">
       <label for="lname">Ingrese el Nombre:</label>
       <br>

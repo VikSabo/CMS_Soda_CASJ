@@ -18,7 +18,7 @@
 
 		if ($connection->query($sql) === TRUE) {
 		    echo "Record deleted successfully";
-			header("Location: ver_informacion.php");
+			header("Location: ver_menu.php");
 		} else {
 		    echo "Error deleting record: " . $connection->error;
 		}
@@ -26,7 +26,7 @@
 
 	else {
 		// if id isn't set, or isn't valid, redirect back to view page
-		header("Location: ver_informacion.php");
+		header("Location: ver_menu.php");
 	}
 
 ?>

@@ -63,18 +63,18 @@
 	</div>
 
 
+
 <div id="container">
-  <h1 align = "center">Formulario para Agregar una Bebida Nueva</h1>
   <br>
   <br>
   <div align = "center">
   <section>
   <!-- meter lo del form -->
-   <div class="formulario" align="center">
+   <div id="container-menu" align="center">
     <form action="" method="post">
       <label for="lname">Ingrese el Nombre:</label>
       <br>
-      <input type="text" id="nombrebebida" name="nombrebebida"><br>
+      <input type="text" id="nombrebebida" name="nombrebebida" style="font-family: fantasy;"><br>
 	  <br>
 	  <label for="lname">Descripción de la Bebida:</label>
 	  <br>

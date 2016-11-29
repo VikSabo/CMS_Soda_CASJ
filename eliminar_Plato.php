@@ -63,7 +63,6 @@
 		$query = mysqli_query($connection,"SELECT id_plato, nombre_plato, descripcion, precio FROM plato");
 
 	?>
-	<h1>Eliminar Plato</h1>
 	<table border='1' cellpadding='10'>
   		<tr>
           <th>ID</th>

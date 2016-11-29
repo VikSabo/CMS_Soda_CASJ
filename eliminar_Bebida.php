@@ -63,7 +63,6 @@
 		$query = mysqli_query($connection,"SELECT id_bebida, nombre_bebida, descripcion, precio FROM bebida");
 
 	?>
-	<h1>Eliminar Bebida</h1>
 	<table border='1' cellpadding='10'>
   		<tr>
           <th>ID</th>

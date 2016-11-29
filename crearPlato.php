@@ -74,7 +74,7 @@
     <form action="" method="post">
       <label for="lname">Ingrese el Nombre:</label>
       <br>
-      <input type="text" id="nombreplato" name="nombreplato"><br>
+      <input type="text" id="nombreplato" name="nombreplato" style="font-family: fantasy;"><br>
 	  <br>
 	  <label for="lname">Descripción del Platillo:</label>
 	  <br>

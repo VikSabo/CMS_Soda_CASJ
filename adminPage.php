@@ -57,8 +57,8 @@
 	        <li><a href="crearPlato.php"><span>Crear Nuevo Plato</span></a></li>
 	        <li><a href="crearBebida.php"><span>Crear Nueva Bebida</span></a></li>
 	        <li><a href="ver_menu.php"><span>Ver información menú</span></a></li>
-	        <li><a href="eliminar_Plato.php"><span>Eliminar Plato</span></a></li>
-	        <li><a href="eliminar_Bebida.php"><span>Eliminar Bebida</span></a></li>
+	        <li><a href="eliminar_Plato.php"><span>Quitar Plato</span></a></li>
+	        <li><a href="eliminar_Bebida.php"><span>Quitar Bebida</span></a></li>
 	      </ul>
 	    </div>
 	  </div>

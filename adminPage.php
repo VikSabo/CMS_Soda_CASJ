@@ -4,7 +4,7 @@
 
 	$connection = db_connect();
 
-	$sql = "SELECT `nombre_contacto`, `apellido_contacto`, `telefono_contacto`, `email_contacto`, `provincia`.`nombre_provincia`, `lugar_contacto`, `fecha_contacto`, `personas_contacto`, `servicio_contacto`, `extra_contacto` FROM `cotizar` INNER JOIN `provincia` ON `cotizar`.`id_provincia`=`provincia`.`id_provincia`";
+	$sql = "SELECT `nombre_contacto`, `apellido_contacto`, `telefono_contacto`, `email_contacto`, `provincia`.`nombre_provincia`, `lugar_contacto`, `fecha_contacto`, `personas_contacto`, `servicio_contacto`, `extra_contacto` FROM `cotizar` INNER JOIN `provincia` ON `cotizar`.`id_provincia`=`provincia`.`id_provincia` WHERE `cotizar`.`estado_cotizar` = 'activo' ORDER BY `cotizar`.`fecha_contacto` ASC";
 	$result = mysqli_query($connection, $sql);
 
 	if (mysqli_num_rows($result) > 0) {
@@ -20,7 +20,7 @@
 			echo '</tr>';
 	    }
 	} else {
-	    echo "0 results";
+	    echo "<div class='info'>No hay datos a mostrar</div>";
 	}
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
     if (typeof(mylink) == 'string') href=mylink;
     else href=mylink.href; 
     //window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
-    window.open("http://localhost/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=400,height=200,scrollbars=yes'); 
+    window.open("http://localhost/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
     return false; 
   }
 </SCRIPT>
@@ -66,7 +66,6 @@
 
 
 	<div id="container">
-		<h1>Cotizaciones</h1>
 	</div>
 </body>
 </html>

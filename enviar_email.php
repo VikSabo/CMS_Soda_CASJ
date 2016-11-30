@@ -31,7 +31,7 @@ require 'PHPMailer/PHPMailerAutoload.php';
 				//$mail->addCC('cc@example.com');
 				//$mail->addBCC('bcc@example.com');
 
-        		$mail->addAttachment($uploadfile, 'Cotizacion.txt');
+        		$mail->addAttachment($uploadfile, 'Cotizacion.pdf');
 				//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 				$mail->isHTML(true);                                  // Set email format to HTML
 
@@ -40,7 +40,7 @@ require 'PHPMailer/PHPMailerAutoload.php';
 				//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 				if(!$mail->send()) {
-				    echo 'Message could not be sent.';
+				    echo 'El correo fue enviado';
 				    echo 'Mailer Error: ' . $mail->ErrorInfo;
 				} else {
 				    echo 'Message has been sent';
@@ -55,18 +55,20 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="estilos/enviar_email.css">
 </head>
-<form action="" method="post"  enctype="multipart/form-data">
-Nombre:<br>
-<input type="text" id="name" name="name"><br>
-E-mail:<br>
-<input type="text" id="mail" name="mail"><br>
-Comentario:<br>
-<input type="text" id="comment" name="comment" size="50"><br><br>
-<input type="hidden" name="MAX_FILE_SIZE" value="100000"> Send this file: <input name="userfile" type="file"><br><br>
-<input type="submit" value="Send">
-<input type="reset" value="Reset">
-</form>
+<body>
+		<form action="" method="post"  enctype="multipart/form-data">
+		<div class="css-font-style">Nombre:</div>
+		<input type="text" class="textbox" id="name" name="name"><br>
+		<div class="css-font-style">E-mail:</div>
+		<input type="email" class="textbox" id="mail" name="mail"><br>
+		<div class="css-font-style">Comentario:</div>
+		<input type="text" class="textbox" id="comment" name="comment" size="50"><br><br>
+		<input type="hidden" name="MAX_FILE_SIZE" value="100000"> Adjuntar archivo: <input name="userfile" type="file" accept=".pdf"><br><br>
+		<input type="submit" class="css_button" value="Enviar correo">		
+		<input type="reset" class="css_button" value="Limpiar">
+	</form>
 
 </body>
 </html>

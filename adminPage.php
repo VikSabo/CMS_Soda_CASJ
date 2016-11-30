@@ -15,7 +15,8 @@
 	    	echo '<tr>';
 			foreach($row as $key=>$value) {
 				echo '<td>',$value,'</td>';
-			}?>
+			}
+			?>
 			<td align='center'><input type=submit value="Cotizar" style="width:100%" onClick="return popup(this, 'notes')"><?php
 			echo '</tr>';
 	    }
@@ -38,7 +39,8 @@
     if (typeof(mylink) == 'string') href=mylink;
     else href=mylink.href; 
     //window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
-    window.open("http://localhost:8080/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
+    //window.open("http://localhost:8080/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
+    window.open("http://localhost/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
     return false; 
   }
 </SCRIPT>

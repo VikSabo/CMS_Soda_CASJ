@@ -44,7 +44,6 @@
 	    </div>
 	  </div>
 	</div>
-
 	
 	<!-- -->
 	<?php
@@ -62,39 +61,46 @@
 		//Fetch from database first 10 items which is its limit. For that when page open you can see first 10 items. 
 		$query = mysqli_query($connection,"SELECT m.id_menu, p.nombre_plato, b.nombre_bebida, m.date FROM menu m  INNER JOIN plato p ON m.id_plato = p.id_plato INNER JOIN bebida b ON m.id_bebida = b.id_bebida LIMIT $start, $limit");
 
-	?>
-	<table border='1' cellpadding='10'>
-  		<tr>
-          <th>ID</th>
-          <th>Nombre Plato</th>
-          <th>Nombre Bebida</th> 
-          <th>Fecha</th>
-          <th></th>
-          <th></th>
-        </tr>
-	<?php
-		//print 10 items
-		while($result = mysqli_fetch_array($query))
-		{
+		if (mysqli_num_rows($query) > 0) {
+			echo "<table border='1' cellpadding='10'>";
 			echo "<tr>";
+				echo "<th>ID</th>";
+				echo "<th>Nombre Plato</th>";
+				echo "<th>Nombre Bebida</th> ";
+				echo "<th>Fecha</th>";
+				echo "<th></th>";
+				echo "<th></th>";
+			echo "</tr>";
 
-	        echo '<td>' . $result['id_menu'] . '</td>';
+			//print 10 items
+			while($result = mysqli_fetch_array($query))
+			{
+				echo "<tr>";
 
-	        echo '<td>' . $result['nombre_plato'] . '</td>';
+		        echo '<td>' . $result['id_menu'] . '</td>';
 
-	        echo '<td>' . $result['nombre_bebida'] . '</td>';
+		        echo '<td>' . $result['nombre_plato'] . '</td>';
 
-	        echo '<td>' . $result['date'] . '</td>';
+		        echo '<td>' . $result['nombre_bebida'] . '</td>';
 
-	        echo '<td><a href="editar_menu.php?id=' . $result['id_menu'] . '">Editar</a></td>';
+		        echo '<td>' . $result['date'] . '</td>';
 
-	        echo '<td><a href="eliminar_menu.php?id=' . $result['id_menu'] . '" class="delete">Eliminar</a></td>';
+		        echo '<td><a href="editar_menu.php?id=' . $result['id_menu'] . '">Editar</a></td>';
 
-	        echo "</tr>";
+		        echo '<td><a href="eliminar_menu.php?id=' . $result['id_menu'] . '" class="delete">Eliminar</a></td>';
+
+		        echo "</tr>";
+			}
+
+			echo "</table>";
 		}
+		else {
+		    echo "<div class='info'>No hay datos a mostrar</div>";
+		}
+
 	?>
-	</table>
-	<div class="pagination clearfix">
+      
+	<div class="pagination clearfix" id="siguiente">
 	<?php
 		//fetch all the data from database.
 		$rows = mysqli_num_rows(mysqli_query($connection,"select * from `menu`"));

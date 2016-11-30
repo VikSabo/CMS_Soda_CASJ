@@ -8,8 +8,16 @@
 		$nombreBebida = $_POST['nombrebebida'];
 		$descripcionBebida = $_POST['descripcionbebida'];
 		$precioBebida = $_POST['preciobebida'];
-		$miArchivo = $_POST['myFile'];
-		$direccionTotal = 'bebidas_img/'.$miArchivo;
+		//$miArchivo = $_POST['myFile'];
+
+		//save image to folder projects
+      	$folder = "C:/xampp/htdocs/Proyecto_Soda_Tec/bebidas_img/";
+      	move_uploaded_file($_FILES["filep"]["tmp_name"] , "$folder".$_FILES["filep"]["name"]);
+
+      	//name of the image
+      	$nombreImagen = $_FILES["filep"]["name"];
+
+      	$direccionTotal = "platos_img/".$nombreImagen;
 		
 		//if($nombrePlato or $descripcionPlato or $precioPlato === null){
 		//echo "Exiten campos en blanco, refrescar y agregar correctamente";
@@ -71,27 +79,27 @@
   <section>
   <!-- meter lo del form -->
    <div id="container-menu" align="center">
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
       <label for="lname">Ingrese el Nombre:</label>
       <br>
-      <input type="text" id="nombrebebida" name="nombrebebida" style="font-family: fantasy;"><br>
+      <input type="text" id="nombrebebida" name="nombrebebida"><br>
 	  <br>
 	  <label for="lname">Descripción de la Bebida:</label>
 	  <br>
-	  <textarea name="descripcionbebida" id="descripcionbebida" style="font-family: fantasy;" rows="4" cols="27"></textarea>
+	  <textarea name="descripcionbebida" id="descripcionbebida" rows="4" cols="27"></textarea>
 	  <br>
 	  <br>
 	  <label for="lname">Ingrese el precio de la Bebida:</label>
 	  <br>
       <input type="number" id="preciobebida" name="preciobebida"><br>
 	  <br>
-	  <input type="file" id="myFile" name="myFile">
-	  <script>
+	  <input type="file" name="filep"><br><br>
+	  <!--<script>
 		function myFunction() {
 			var x = document.getElementById("myFile");
 			x.disabled = true;
 		}
-	  </script>
+	  </script>-->
 	  <br>
 	  <br>
 	  <input type="submit" value="Agregar Bebida"/><br>

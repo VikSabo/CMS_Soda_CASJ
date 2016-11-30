@@ -9,8 +9,16 @@
 		$nombrePlato = $_POST['nombreplato'];
 		$descripcionPlato = $_POST['descripcionplato'];
 		$precioPlato = $_POST['precioplato'];
-		$miArchivo = $_POST['myFile'];
-		$direccionTotal = 'platos_img/'.$miArchivo;
+		//$miArchivo = $_POST['myFile'];
+		
+		//save image to folder projects
+      	$folder = "C:/xampp/htdocs/Proyecto_Soda_Tec/platos_img/";
+      	move_uploaded_file($_FILES["filep"]["tmp_name"] , "$folder".$_FILES["filep"]["name"]);
+
+      	//name of the image
+      	$nombreImagen = $_FILES["filep"]["name"];
+
+      	$direccionTotal = "platos_img/".$nombreImagen;
 		
 		//if($nombrePlato or $descripcionPlato or $precioPlato === null){
 		//echo "Exiten campos en blanco, refrescar y agregar correctamente";
@@ -71,7 +79,7 @@
   <section>
   <!-- meter lo del form -->
    <div id="container-menu" align="center">
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
       <label for="lname">Ingrese el Nombre:</label>
       <br>
       <input type="text" id="nombreplato" name="nombreplato"><br>
@@ -85,13 +93,13 @@
 	  <br>
       <input type="number" id="precioplato" name="precioplato"><br>
 	  <br>
-	  <input type="file" id="myFile" name="myFile">
-	  <script>
+	  <input type="file" name="filep"><br><br>
+	  <!--<script>
 		function myFunction() {
 			var x = document.getElementById("myFile");
 			x.disabled = true;
 		}
-	  </script>
+	  </script>-->
 	  <br>
 	  <br>
 	  <input type="submit" value="Agregar Plato"/><br>

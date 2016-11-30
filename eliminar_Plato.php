@@ -62,34 +62,52 @@
 		//$query = mysqli_query($connection,"SELECT m.id_menu, p.nombre_plato, b.nombre_bebida, m.date FROM menu m  INNER JOIN plato p ON m.id_plato = p.id_plato INNER JOIN bebida b ON m.id_bebida = b.id_bebida LIMIT $start, $limit");
 		$query = mysqli_query($connection,"SELECT id_plato, nombre_plato, descripcion, precio FROM plato");
 
-	?>
-	<table border='1' cellpadding='10'>
-  		<tr>
-          <th>ID</th>
-          <th>Nombre Plato</th>
-          <th>Descripción de Plato</th> 
-          <th>Precio del Plato</th>
-          <th></th>
-          <th></th>
-        </tr>
-	<?php
-		//print 10 items
-		while($result = mysqli_fetch_array($query))
-		{
+	
+
+	////////////////////////////////////////////////////////////////////////////-->
+
+
+		if (mysqli_num_rows($query) > 0) {
+			echo "<table border='1' cellpadding='10'>";
 			echo "<tr>";
+				echo "<th>ID</th>";
+				echo "<th>Nombre Plato</th>";
+				echo "<th>Descripción de Plato</th> ";
+				echo "<th>Precio del Plato</th>";
+				echo "<th></th>";
+				echo "<th></th>";
+			echo "</tr>";
 
-	        echo '<td>' . $result['id_plato'] . '</td>';
+			//print 10 items
+			while($result = mysqli_fetch_array($query))
+			{
+				echo "<tr>";
 
-	        echo '<td>' . $result['nombre_plato'] . '</td>';
+		        echo '<td>' . $result['id_plato'] . '</td>';
 
-	        echo '<td>' . $result['descripcion'] . '</td>';
+	       	 	echo '<td>' . $result['nombre_plato'] . '</td>';
 
-	        echo '<td>' . $result['precio'] . '</td>';
+	        	echo '<td>' . $result['descripcion'] . '</td>';
 
-	        echo '<td><a href="ElimPlato.php?id=' . $result['id_plato'] . '" class="delete">Eliminar</a></td>';
+	        	echo '<td>' . $result['precio'] . '</td>';
 
-	        echo "</tr>";
+	        	echo '<td><a href="ElimPlato.php?id=' . $result['id_plato'] . '" class="delete">Eliminar</a></td>';
+
+		        echo "</tr>";
+			}
+
+			echo "</table>";
 		}
+		else {
+		    echo "<div class='info'>No hay datos a mostrar</div>";
+		}
+
+	
+
+
+
+	////////////////////////////////////////////////////////////////////////////-->
+	
 	?>
 	</table>
 	<div class="pagination clearfix">

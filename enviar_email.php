@@ -40,13 +40,13 @@ require 'PHPMailer/PHPMailerAutoload.php';
 				//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 				if(!$mail->send()) {
-				    echo 'El correo fue enviado';
-				    echo 'Mailer Error: ' . $mail->ErrorInfo;
+				    echo 'El correo no fue enviado';
+				    echo 'Hubo un problema: ' . $mail->ErrorInfo;
 				} else {
-				    echo 'Message has been sent';
+				    echo 'El correo fue enviado';
 				}
 			} else {
-				$msg .= 'Failed to move file to ' . $uploadfile;
+				echo 'Error al enviar el archivo: ' . $uploadfile;
 			}
 		}
 	}

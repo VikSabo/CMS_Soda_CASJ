@@ -74,11 +74,11 @@
     <form action="" method="post">
       <label for="lname">Ingrese el Nombre:</label>
       <br>
-      <input type="text" id="nombreplato" name="nombreplato" style="font-family: fantasy;"><br>
+      <input type="text" id="nombreplato" name="nombreplato"><br>
 	  <br>
 	  <label for="lname">Descripción del Platillo:</label>
 	  <br>
-	  <textarea name="descripcionplato" id="descripcionplato" style="font-family: fantasy;" rows="4" cols="27"></textarea>
+	  <textarea name="descripcionplato" id="descripcionplato" rows="4" cols="27"></textarea>
 	  <br>
 	  <br>
 	  <label for="lname">Ingrese el precio del Platillo:</label>

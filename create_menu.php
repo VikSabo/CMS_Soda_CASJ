@@ -56,40 +56,45 @@
 	  </div>
 	</div>
 
-	<div id="container">
-		<div align="center">
-			<div id="container-menu">
-				<form action="" method="post">
-					<label>Seleccione un platillo</label><br>
-					<select id="soflow" name="idPlato">
-					  <?php 
-					  	$sql = "SELECT * FROM plato";
-					    $result = mysqli_query($connection,$sql);
-					    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {                                                 
-					       echo "<option value='".$row['id_plato']."'>".$row['nombre_plato']."</option>";
-					    }
-					  ?>
-					</select><hr class="style4"><br>
+<div id="container">
+  <br>
+  <br>
+  <div align = "center">
+  <section>
+  <!-- meter lo del form -->
+   	<div id="container-menu" align="center">
+    	<form action="" method="post">
+			<label>Seleccione un platillo</label><br>
+			<select id="soflow" name="idPlato">
+			  <?php 
+			  	$sql = "SELECT * FROM plato";
+			    $result = mysqli_query($connection,$sql);
+			    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {                                                 
+			       echo "<option value='".$row['id_plato']."'>".$row['nombre_plato']."</option>";
+			    }
+			  ?>
+			</select><hr class="style4"><br>
 
-					<label>Seleccione una bebida</label><br>
-					<select id="soflow" name="idBebida">
-					  <?php 
-					  	$sql = "SELECT * FROM bebida";
-					    $result = mysqli_query($connection,$sql);
-					    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {                                                 
-					       echo "<option value='".$row['id_bebida']."'>".$row['nombre_bebida']."</option>";
-					    }
-					  ?>
-					</select><hr class="style4"><br>
+			<label>Seleccione una bebida</label><br>
+			<select id="soflow" name="idBebida">
+			  <?php 
+			  	$sql = "SELECT * FROM bebida";
+			    $result = mysqli_query($connection,$sql);
+			    while($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {                                                 
+			       echo "<option value='".$row['id_bebida']."'>".$row['nombre_bebida']."</option>";
+			    }
+			  ?>
+			</select><hr class="style4"><br>
 
-					<label>Seleccione la fecha para el menú</label><br>
-					<input type="date" name="fecha">
+			<label>Seleccione la fecha para el menú</label><br>
+			<input type="date" name="fecha"><br>
 
-					<input type="submit" name="submit" value="Crear Menú">
-				</form>
-			</div>
-		</div>
-	</div>
+			<input type="submit" name="submit" value="Crear Menú">
+		</form>
+  	</div>
+  </section>
+  </div>
+  </div>
 
 </body>
 </html>

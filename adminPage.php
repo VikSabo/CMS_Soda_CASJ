@@ -40,7 +40,7 @@
     else href=mylink.href; 
     //window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
     //window.open("http://localhost:8080/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
-    window.open("http://localhost/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
+    window.open("http://localhost:8080/CMS_Soda_CASJ/enviar_email.php", "MsgWindow",'width=500,height=400,scrollbars=yes'); 
     return false; 
   }
 </SCRIPT>

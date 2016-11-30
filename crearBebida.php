@@ -17,7 +17,7 @@
       	//name of the image
       	$nombreImagen = $_FILES["filep"]["name"];
 
-      	$direccionTotal = "platos_img/".$nombreImagen;
+      	$direccionTotal = "bebidas_img/".$nombreImagen;
 		
 		//if($nombrePlato or $descripcionPlato or $precioPlato === null){
 		//echo "Exiten campos en blanco, refrescar y agregar correctamente";
